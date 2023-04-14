@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @keyframes slide-from-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/* Element to be moved. Must have position: absolute */
+.slide-left {
+    width: 800px;
+    height: 400px;
+    background-color: yellowgreen;
+    position: absolute;
+    left: 0;
+    animation-name: slide-from-left;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease
+}
+    </style>
+</head>
+<body>
+    <div class="slide-left">
+        background
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, sed voluptas facilis facere eveniet nesciunt. Provident explicabo aperiam vero repellendus nam fuga eum possimus accusantium in tempora. Porro, consequuntur optio?</p>
+<div>
+  import React, { useState,useEffect } from 'react'
+import { slideArr, eventArr } from '@/component/data'
+import Image from 'next/image'
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+
+
+const cathering = () => {
+  const [index, setIndex] = useState(0)
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (index < slideArr.length - 1) {
+        setIndex(prev => prev + 1)
+      } else {
+        setIndex(0)
+      } 
+    }, 6000)
+   
+  }, [index])
+  const next = () => {
+    if (index < slideArr.length - 1) {
+      setIndex(prev => prev + 1)
+      console.log(index)
+    } else {
+      setIndex(0)
+    }
+    
+  } 
+  const back = () => {
+    if (index === 0) {
+     setIndex(slideArr.length - 1)
+    } else {
+      setIndex(prev => prev - 1)
+   }
+ } 
+  const filteredArr = slideArr.map((i) => {
+    return <div className='flex items-center w-9/12 h-96 border-2 border-gray-800 relative'>
+      <Image src={i.img} alt='cater' className='w-full h-full' />
+      <div className='text-white text-center absolute top-1/2 w-full text-4xl font-semibold py-8 px-2 bg-black/70 flex items-center justify-between'>
+      <button onClick={next} className='border-1 bg-orange-500 p-2 font-bold'> <BsArrowLeft /></button> 
+        <h1>{i.text}</h1>
+        <button onClick={back} className='border-1 bg-orange-500 p-2 font-bold'><BsArrowRight /></button>
+      </div>  
+    </div>
+  
+  })
+  const events = eventArr.map(ev => {
+    return (
+      <div className=''>
+        <Image src={ev.image} alt="event" className='w-96 h-96' />
+        <p className='text-sm'>{ev.text}</p>
+     </div>
+   )
+  }) 
+  
+
+  return (
+      <>
+      <div className='bg-[url("/images/menu.jpg")] bg-cover bg-center bg-repeat-y bg-black/80 bg-blend-overlay mt-16'>
+        {filteredArr[index]}
+        <div className='m-auto text-center'>
+          <h2 className='text-4xl font-semibold py-4'>We cater to all sorts of event</h2>
+          <p className='w-1/2 m-auto'>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Earum, sed voluptas facilis facere eveniet nesciunt.
+            Provident explicabo aperiam vero repellendus nam fuga eum possimus accusantium in tempora.
+            Porro, consequuntur optio?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum,
+            sed voluptas facilis facere eveniet nesciunt.
+            Provident explicabo aperiam vero repellendus nam fuga eum possimus accusantium in tempora.
+            Porro, consequuntur optio?</p>
+        </div>
+        <div className='border-2 text-center'>
+          <h2 className='text-4xl font-semibold py-4'>Our Menu and Packages</h2>
+          <div className='flex gap-4 w-10/12 h-96 m-auto'>
+            {events}
+          </div>
+        </div>
+        
+        
+   </div>
+    </>
+  )
+}
+
+export default cathering
+</div>
+  </body>
+</html>

@@ -6,7 +6,7 @@ import indoor from "../../public/images/indoor.jpg";
 import group from "../../public/images/group.jpg";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
-const dinning = () => {
+const Dinning = () => {
   return (
     <>
      <Head>
@@ -212,4 +212,4 @@ const dinning = () => {
   );
 };
 
-export default dinning;
+export default Dinning;

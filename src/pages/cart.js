@@ -4,7 +4,7 @@ import { cartApi } from "@/contextAPI";
 import Link from "next/link";
 import Head from "next/head";
 
-const cart = () => {
+const Cart = () => {
   const { cart, setCart } = useContext(cartApi);
 
   const add = (food) => {
@@ -94,4 +94,4 @@ const cart = () => {
     </>);
 };
 
-export default cart;
+export default Cart;

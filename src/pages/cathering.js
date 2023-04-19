@@ -6,7 +6,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
 
-const cathering = () => {
+const Cathering = () => {
   const [indx, setIndx] = useState(0);
   useEffect(() => {
     setTimeout(() => {
@@ -130,4 +130,4 @@ const cathering = () => {
   );
 };
 
-export default cathering;
+export default Cathering;

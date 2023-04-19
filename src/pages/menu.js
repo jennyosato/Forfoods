@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { cartApi } from "@/contextAPI";
 
 
-const menu = () => {
+const Menu = () => {
  
   const { setCart, cart } = useContext(cartApi);
   const router = useRouter();
@@ -97,6 +97,6 @@ const menu = () => {
   );
 };
 
-export default menu;
+export default Menu;
 
 

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 
-const contact = () => {
+const Contact = () => {
   return (
    
     <>
@@ -55,4 +55,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

@@ -11,7 +11,7 @@ import dinn from "../../public/images/dine.jpg";
 
 
 
-const activities = () => {
+const Activities = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -136,4 +136,4 @@ const activities = () => {
     </> );
 };
 
-export default activities;
+export default Activities;

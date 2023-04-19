@@ -140,9 +140,11 @@ button {
 @keyframes slider {
   0% {
     top: 100%;
+    opacity: 0;
   }
   10% {
     top: 98%;
+    opacity: 0;
   }
   12% {
     top: 80%;

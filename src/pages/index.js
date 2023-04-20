@@ -5,6 +5,7 @@ import { reviewsArr } from "@/component/data";
 import SpecialsCard from "@/component/specialMealsCard";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 
@@ -12,6 +13,12 @@ import Link from "next/link";
 
 export default function Home() {
   const [index, setIndex] = useState(0)
+
+  const router = useRouter()
+
+  const reserve = () => {
+    router.push('/dinning')
+  }
   
 
     
@@ -50,7 +57,7 @@ export default function Home() {
       </Head>
       <div className="h-screen bg-center relative bg-cover bg-no-repeat bg-[url('/images/home.jpg')] bg-black/60 bg-blend-overlay flex flex-col gap-6 justify-center items-center">
         <h1 className="text-6xl font-bold text-white text-center">
-          Welcome to our Restaurant
+          Welcome to Forfoods
         </h1>
         <Link href='/menu' className="border px-8 py-2 text-xl font-medium bg-orange-600 text-white sticky top-0">
           Order Now
@@ -75,7 +82,7 @@ export default function Home() {
             <p className="text-lg font-normal">
               Come in for delicious and freshly made meals
             </p>
-            <button className="bg-gradient-to-l from-orange-500 from-50% to-black to-50% hover:bg-left bg-orange-500 px-6 py-2">
+            <button onClick={reserve} className="bg-gradient-to-l from-orange-500 from-50% to-black to-50% hover:bg-left bg-orange-500 px-6 py-2">
               Make a Reservation
             </button>
           </div>

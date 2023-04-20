@@ -41,7 +41,7 @@ const Layout = (props) => {
        
         <header className='flex justify-between items-center px-4 py-2 border-2 fixed top-0 bg-white w-screen z-50 '>
           <Link href='/' className=' flex items-center gap-2'>
-            <h1 className='p-2 font-semibold text-xl text-black/700 border-4 border-orange-600'>Forfoods</h1>
+            <h1 className='p-2 font-semibold text-xl text-black/70 border-4 border-orange-600'>Forfoods</h1>
           </Link>
           <nav className='flex items-center'>
           <button onClick={handleOrders} className='hidden lg:block rounded-sm border-0 px-2 md:px-6 py-2 font-medium bg-orange-600 text-white hover:opacity-50'>Order Now</button>

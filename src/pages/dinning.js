@@ -71,7 +71,7 @@ const Dinning = () => {
       </div>
       {/* Menu Section */}
       <AnimationOnScroll animateIn="animate__zoomIn">
-      <div id="menu" className="">
+      <div>
           <h2 className="text-center py-4 font-bold text-4xl text-orange-500">
             Menu
           </h2>

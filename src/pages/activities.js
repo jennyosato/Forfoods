@@ -24,9 +24,9 @@ const Activities = () => {
     }, 7900);
   }, [index]);
 
-  const filteredArr = slideArr.map((i) => {
+  const filteredArr = slideArr.map((i, index) => {
     return (
-      <div
+      <div key={index}
         className="flex items-center w-full h-full"
         style={{
           animationName: "slide",

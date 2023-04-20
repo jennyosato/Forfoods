@@ -18,9 +18,9 @@ const Cathering = () => {
     }, 5000);
   }, [indx]);
 
-  const slider = eventArr.map((item) => {
+  const slider = eventArr.map((item, index) => {
     return (
-      <div className="h-96 w-full md:w-9/12 mx-auto mt-20 relative flex items-center justify-center animate__animated animate__slideInDown">
+      <div key={index} className="h-96 w-full md:w-9/12 mx-auto mt-20 relative flex items-center justify-center animate__animated animate__slideInDown">
         <Image src={item.image} alt="dinner" className="w-full h-full" />
         <div className="absolute text-white text-2xl font-bold p-4 bg-black/50 flex justify-between items-center w-full">
           <button>

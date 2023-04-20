@@ -30,9 +30,9 @@ export default function Home() {
   const specials = specialsArr.map((item) => {
     return (<SpecialsCard meal={item} key={item.id}  />);
   });
-  const reviews = reviewsArr.map(comment => {
+  const reviews = reviewsArr.map((comment,index) => {
     return(
-      <div className="px-4 py-2 bg-white shadow-md border animate__animated animate__slideInRight">
+      <div key={index} className="px-4 py-2 bg-white shadow-md border animate__animated animate__slideInRight">
         <h2 className="text-lg  ">{comment.review}</h2>
         <p className="italic text-right text-blue-700">--{comment.username}--</p>
       </div>

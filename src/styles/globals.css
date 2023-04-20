@@ -106,6 +106,9 @@ a {
 img {
   object-fit: cover;
 }
+input, textarea{
+  background-color: white;
+}
 button {
   /* background: linear-gradient(to left, rgb(255, 166, 0) 50%, black 50%); */
   background-position: right;

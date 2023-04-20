@@ -29,7 +29,7 @@ const Cart = () => {
         <Image src={i.image} alt={i.title} className="h-20 w-28 shrink-0" />
         <div className="flex flex-col md:flex-row justify-evenly flex-grow">
           <h2 className="font-semibold">{i.title}</h2>
-          <div className="flex gap-2">
+          <div className="flex flex-row-reverse gap-2">
             <button
               className="px-2 border border-green-800"
               onClick={() => add(i)}

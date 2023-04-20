@@ -2,8 +2,15 @@ import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 import { FiMessageSquare } from "react-icons/fi";
+import { useRouter } from 'next/router';
+import {TbCurrencyNaira} from 'react-icons/tb'
 
 const SpecialsCard = ({meal}) => {
+  const router = useRouter()
+
+  const toMenu = () => {
+    router.push('/menu')
+  }
   return (
     <div id={meal.index} className="flex flex-col hover:bg-gray-100 hover:scale-105 transition-transform duration-200 ease-in-out shadow-md pb-4 border">
         <Image
@@ -12,16 +19,16 @@ const SpecialsCard = ({meal}) => {
           className=" h-40 md:h-48 w-full object-cover "
         />
 
-        <div className="text-xl text-orange-700 font-semibold px-4 flex justify-between">
+        <div className="text-xl text-orange-700 font-semibold px-2 flex justify-between">
           <p className="text-2xl">{meal.title}</p>
-          <span>#{meal.price}</span>
+          <span className='flex items-center'><TbCurrencyNaira/>{meal.price}</span>
         </div>
         <p className="px-2 max-w-full text-black/70 ">{meal.description}</p>
         <div className="flex justify-between px-4">
           <Link href="/" className="flex items-center gap-2">
             <FiMessageSquare /> Reviews
           </Link>
-          <button className="bg-gradient-to-l from-orange-500 from-50% to-black to-50% hover:bg-left bg-orange-500 px-6 py-2 text-white">
+          <button onClick={toMenu} className="bg-gradient-to-l from-orange-500 from-50% to-black to-50% hover:bg-left bg-orange-500 px-6 py-2 text-white">
             Buy now
           </button>
         </div>

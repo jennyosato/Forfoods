@@ -37,7 +37,7 @@ const Layout = (props) => {
       
        <>
      
-      <main className={`${petrona.className} flex flex-col bg-white`}>
+      <main className={`${petrona.className} flex flex-col bg-white text-black/80`}>
        
         <header className='flex justify-between items-center px-4 py-2 border-2 fixed top-0 bg-white w-screen z-50 '>
           <Link href='/' className=' flex items-center gap-2'>
@@ -55,7 +55,7 @@ const Layout = (props) => {
               <li><Link href="activities" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Activities</Link></li>
             </ul>
             <div className='flex items-center'>
-              <button className='md:hidden text-black/700 text-lg font-bold'>
+              <button className='md:hidden text-black/70 text-lg font-bold'>
               <RxHamburgerMenu onClick={toggleNav} />
               </button>
             {cart.length > 0 &&  <button

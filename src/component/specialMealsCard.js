@@ -16,7 +16,7 @@ const SpecialsCard = ({meal}) => {
           <p className="text-2xl">{meal.title}</p>
           <span>#{meal.price}</span>
         </div>
-        <p className="px-2 max-w-full ">{meal.description}</p>
+        <p className="px-2 max-w-full text-black/70 ">{meal.description}</p>
         <div className="flex justify-between px-4">
           <Link href="/" className="flex items-center gap-2">
             <FiMessageSquare /> Reviews

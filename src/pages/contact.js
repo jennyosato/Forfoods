@@ -13,9 +13,9 @@ const Contact = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <div className='border mt-20 mx-auto w-full md:w-10/12 px-8 py-4 shadow-md md:flex items-center'>
+    <div className='border mt-16 mx-auto w-full md:w-10/12 px-8 py-4 shadow-md md:flex items-center'>
       <h1 className='w-full text-4xl font-bold text-gray-900 text-center '>Reach out to Us</h1>
-      <form className=' w-full flex flex-col gap-4'>
+      <form className=' w-full flex flex-col bg-white gap-4 text-gray-900'>
       <h2 className='font-semibold py-4'>We value your continous patronage, for feedback on our services,complaints or ways we can better serve you please fill out the form below </h2>
         <div>
         <label htmlFor='name'>Name</label>
@@ -34,14 +34,14 @@ const Contact = () => {
       </form>
     </div>
           {/* New section */}
-          <div className='pl-4 py-4 w-full md:w-10/12 mx-auto'>
+          <div className='pl-4 py-4 w-full md:w-10/12 mx-auto text-gray-900'>
             <h2 className='text-3xl font-bold text-gray-900 py-4'>Cathering services</h2>
             <p>To get a quotation for your events please contact us on:</p>
             <p><span className='font-semibold'>Phone</span>: +2347032873032</p>
            <p><span className='font-semibold'>Email</span>: st.jennyandy@gmail.com</p>
           </div>
              {/* New Section */}
-          <div className='px-4 py-4 w-full md:w-10/12 mx-auto'>
+          <div className='px-4 py-4 w-full md:w-10/12 mx-auto text-gray-900'>
             <h2 className='text-3xl font-bold text-gray-900 py-4'>Let us be your host</h2>
             <h2>We would love to host your next birthday or engagement party or maybe just a reunion with old friends </h2>
             <p>Walk-in to our venue to make a reservation and let us handle all the hassle</p>

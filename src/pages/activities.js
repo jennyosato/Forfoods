@@ -57,8 +57,8 @@ const Activities = () => {
 <link rel="icon" href="/favicon.ico" />
 </Head>
    
-    <div className="flex flex-col items-center justify-evenly w-full gap-20">
-      <div className="w-screen h-xlx mt-20">{filteredArr[index]}</div>
+    <div className="flex flex-col items-center justify-evenly w-full gap-20 mt-16 text-black/90">
+      <div className="w-screen h-xlx ">{filteredArr[index]}</div>
       {/* New Section */}
       <div className="flex flex-col md:flex-row items-center md:h-96 w-11/12 shadow-md border">
         <div className="w-full ">

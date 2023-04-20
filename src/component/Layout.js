@@ -37,25 +37,27 @@ const Layout = (props) => {
       
        <>
      
-      <main className={`${petrona.className} flex flex-col`}>
+      <main className={`${petrona.className} flex flex-col bg-white`}>
        
         <header className='flex justify-between items-center px-4 py-2 border-2 fixed top-0 bg-white w-screen z-50 '>
           <Link href='/' className=' flex items-center gap-2'>
-            <h1 className='p-2 font-semibold text-xl border-4 border-orange-600'>Forfoods</h1>
+            <h1 className='p-2 font-semibold text-xl text-black/700 border-4 border-orange-600'>Forfoods</h1>
           </Link>
           <nav className='flex items-center'>
           <button onClick={handleOrders} className='hidden lg:block rounded-sm border-0 px-2 md:px-6 py-2 font-medium bg-orange-600 text-white hover:opacity-50'>Order Now</button>
            
             <ul className={toggle ? 'gap-6 px-4 flex flex-col absolute top-16 right-0 bg-white w-10/12': 'hidden md:flex md:flex-row md:relative md:gap-6 px-4 '}> 
-              <li><Link href="/" onClick={() =>setToggle(false)} className='text-lg hover:text-orange-500 font-semibold focus:text-orange-600'>Home</Link></li>
-              <li><Link href="/cathering" onClick={() =>setToggle(false)} className='text-lg  hover:text-orange-500 font-semibold focus:text-orange-600'>Cathering</Link></li>
-              <li><Link href="/dinning" onClick={() =>setToggle(false)} className='text-lg  hover:text-orange-500 font-semibold focus:text-orange-600'>Dine in</Link></li>
-              <li><Link href="/menu" onClick={() =>setToggle(false)} className='text-lg  hover:text-orange-500 font-semibold focus:text-orange-600'>Menu</Link></li>
-              <li><Link href="/contact" onClick={() =>setToggle(false)} className='text-lg  hover:text-orange-500 font-semibold focus:text-orange-600'>Contact Us</Link></li>
-              <li><Link href="activities" onClick={() =>setToggle(false)} className='text-lg  hover:text-orange-500 font-semibold focus:text-orange-600'>Activities</Link></li>
+              <li><Link href="/" onClick={() =>setToggle(false)} className='text-lg text-black/700 hover:text-orange-500 font-semibold focus:text-orange-600'>Home</Link></li>
+              <li><Link href="/cathering" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Cathering</Link></li>
+              <li><Link href="/dinning" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Dine in</Link></li>
+              <li><Link href="/menu" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Menu</Link></li>
+              <li><Link href="/contact" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Contact Us</Link></li>
+              <li><Link href="activities" onClick={() =>setToggle(false)} className='text-lg text-black/700  hover:text-orange-500 font-semibold focus:text-orange-600'>Activities</Link></li>
             </ul>
             <div className='flex items-center'>
-            <RxHamburgerMenu onClick={toggleNav} className='md:hidden text-lg font-bold'/>
+              <button className='md:hidden text-black/700 text-lg font-bold'>
+              <RxHamburgerMenu onClick={toggleNav} />
+              </button>
             {cart.length > 0 &&  <button
               onClick={handleCart}
               className=' px-2 py-4 font-medium bg-white text-orange-600 hover:opacity-80 flex items-center'>

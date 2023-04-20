@@ -18,16 +18,31 @@ const Cathering = () => {
     }, 5000);
   }, [indx]);
 
+  const next = () => {
+    if (indx < eventArr.length - 1) {
+      setIndx((prev) => prev + 1);
+    } else {
+      setIndx(0);
+    }
+  }
+  const back = () => {
+    if(indx === 0){
+      setIndx(eventArr.length - 1)
+    }else{
+      setIndx((prev) => prev - 1);
+    }
+  }
+
   const slider = eventArr.map((item, index) => {
     return (
-      <div key={index} className="h-96 w-full md:w-9/12 mx-auto mt-20 relative flex items-center justify-center animate__animated animate__slideInDown">
+      <div key={index} className="h-96 w-full md:w-9/12 mx-auto mt-16 relative flex items-center justify-center transition-transform duration-200 ease-in-out ">
         <Image src={item.image} alt="dinner" className="w-full h-full" />
         <div className="absolute text-white text-2xl font-bold p-4 bg-black/50 flex justify-between items-center w-full">
-          <button>
+          <button onClick={back}>
             <BsArrowLeft />
           </button>
           <p className="">{item.text}</p>
-          <button>
+          <button onClick={next}>
             <BsArrowRight />
           </button>
         </div>
@@ -44,7 +59,10 @@ const Cathering = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
   
-      {slider[indx]}
+  <div className="animate__animated animate__slideInDown">
+  {slider[indx]}
+  </div>
+      
       
       <div className="mx-auto mt-10 text-center">
         <h2 className="text-3xl font-semibold py-4">

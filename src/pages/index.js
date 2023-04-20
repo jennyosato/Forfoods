@@ -62,7 +62,7 @@ export default function Home() {
           <h2 className="bg-orange-600 text-center py-6 text-3xl font-bold text-white mb-6">
             Forfoods Specials
           </h2>
-          <div className="grid grid-cols-fluid md:gap-16 gap-8 w-full">
+          <div className="grid  md:grid-cols-3 md:gap-16 gap-8 w-full">
             {specials}
           </div>
         </div>

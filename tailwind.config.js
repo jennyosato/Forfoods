@@ -7,6 +7,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  
   theme: {
     screens: {
       'sm': '640px',
@@ -32,10 +33,15 @@ module.exports = {
         slide: {
           from: { left: '100%' },
           to: { left: '0%' },
+        },
+        marqx: {
+          from: {transform: 'translateX(0)'},
+          to: {transform: 'translateX(-50%)'}
         }
       },
       animation: {
         slide: 'slide 1s infinite',
+        marquee: 'marqx 15s linear infinite'
        },
       backgroundImage: {
         '100': '100%',

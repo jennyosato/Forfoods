@@ -1,6 +1,4 @@
 import React, {useState, useContext} from 'react'
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ImFacebook2 } from 'react-icons/im'
 import { FaTwitterSquare } from 'react-icons/fa'

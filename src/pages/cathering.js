@@ -4,6 +4,7 @@ import Image from "next/image";
 import { eventArr } from "@/component/data";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
+import menuData from "@/component/data";
 
 
 const Cathering = () => {
@@ -32,6 +33,7 @@ const Cathering = () => {
       setIndx((prev) => prev - 1);
     }
   }
+  
 
   const slider = eventArr.map((item, index) => {
     return (
@@ -142,6 +144,16 @@ const Cathering = () => {
               <h2 className="text-2xl font-semibold py-4">Bevarages Menu</h2>
             </div>
           </Link>
+        </div>
+        <div className="bg-red-400 w-full h-96 mt-20">
+          <h2 className="text-center">You may also like</h2>
+          <div className="relative overflow-x-hidden w-full h-full">
+            <div className="flex justify-center gap-4 mt-8 absolute whitespace-nowrap animate-marquee duration-[15s] w-[200%] will-change-transform">{ menuData.map(i => {
+         return <div key={i.id} className="w-full h-full">
+      <Image src={i.image} alt={i.title} width={400} height={400} className="w-full h-full" />
+    </div>
+  })}</div>
+          </div>
         </div>
       </div>
     </>

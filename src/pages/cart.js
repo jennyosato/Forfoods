@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cartApi } from "@/contextAPI";
 import Link from "next/link";
 import Head from "next/head";
+import {TbCurrencyNaira} from 'react-icons/tb'
 
 const Cart = () => {
   const { cart, setCart } = useContext(cartApi);
@@ -41,7 +42,7 @@ const Cart = () => {
               -
             </button>
           </div>
-          <p>#{i.price * i.qty}</p>
+          <p className="flex items-center"><TbCurrencyNaira/>{i.price * i.qty}</p>
         </div>
         <button
           onClick={() => removeItem(i)}
@@ -76,16 +77,16 @@ const Cart = () => {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.ico" />
 </Head>
-    <div className="flex flex-col lg:flex-row md:gap-20 mt-16 py-4 px-4 w-full m-auto h-auto md:px-20">
+    <div className="flex flex-col lg:flex-row md:gap-20 mt-16 py-4 px-4 w-full m-auto h-screen md:px-20">
       <h2 className="absolute text-xl text-orange-600 font-semibold">
         {cart.length} Meal(s) in cart
       </h2>
       <div className="w-full  flex flex-col gap-4 mt-8">{foodItems}</div>
 
       <div className="flex flex-col gap-2 w-full md:w-1/2">
-        <h2 className="text-xl font-medium">Sub Total: #{total}</h2>
-        <h2 className="text-xl font-medium">Delivery: #{delivery}</h2>
-        <h1 className="text-2xl font-bold ">Total: #{total + delivery}</h1>
+        <h2 className="text-xl font-medium flex items-center">Sub Total: <TbCurrencyNaira/>{total}</h2>
+        <h2 className="text-xl font-medium flex items-center">Delivery: <TbCurrencyNaira/>{delivery}</h2>
+        <h1 className="text-2xl font-bold flex items-center ">Total: <TbCurrencyNaira/>{total + delivery}</h1>
         <button className="w-full bg-orange-500 text-white font-bold py-2 md:py-4 md:text-xl">
           Check Out
         </button>
